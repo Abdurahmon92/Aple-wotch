@@ -23,9 +23,10 @@
 :root {
   --text-color: #333;
   --brand-color: #ea625c;
+  --brand-hover-color: #C9514C;
   --bgcolor: #fff;
   --black-color: #000;
-  --all-text-wraper-text:#777;
+  --all-text-wraper-text: #777;
 }
 
 
@@ -79,19 +80,21 @@ body {
 /* button styles */
 
 .site-btn {
-   font-weight: 700;
-   font-size: 18px;
-   line-height: 27px;
-   color: #fff;
-   text-decoration: none;
-   text-transform: uppercase;
-   padding: 12px 38.5px;
-   background-color:var(--brand-color);
-   display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 38.5px;
+  background-color: var(--brand-color);
+  display: inline-block;
 }
 
+.site-btn:hover {
+  background-color: var(--brand-hover-color);
+}
 /* button styles end*/
-
 /* global styles end*/
 
 
@@ -103,14 +106,12 @@ body {
 .site-header-container {
   display: flex;
   align-items: center;
-
 }
 
 .site-header-logo-link {
   text-decoration: none;
   display: flex;
   margin-right: auto;
-
 }
 
 .site-header-logo-link:hover {
@@ -225,18 +226,16 @@ body {
 }
 
 .all-text-wraper-text {
-    font-size: 16px;
-    color: var(--all-text-wraper-text);
-    margin-bottom: 30px; 
-    border-left: 3px solid #888;
-    padding-left: 37px;
+  font-size: 16px;
+  color: var(--all-text-wraper-text);
+  margin-bottom: 30px;
+  border-left: 3px solid #888;
+  padding-left: 37px;
 }
 
 
 
-.hero-btn {
-
-}
+.hero-btn {}
 
 /* SECTION HERO STYLES END*/
 
@@ -246,12 +245,8 @@ body {
   padding: 70px 0px 70px 0px;
   border-top: 2px solid #DDDDDD;
 }
-.contayner {
 
-}
-.features-container{
 
-}
 .features-list {
   display: flex;
   flex-direction: row;
@@ -259,10 +254,12 @@ body {
   margin-left: -80px;
 
 }
+
 .features-list-item {
   width: 280px;
   margin-left: 80px;
 }
+
 .features-item-title {
   font-weight: 700;
   line-height: 27px;
@@ -272,9 +269,11 @@ body {
   color: var(--black-color);
 
 }
+
 .features-item-item-text {
   margin-bottom: 20px;
 }
+
 .feature-item-point {
   display: inline-block;
   width: 8px;
@@ -282,6 +281,7 @@ body {
   box-shadow: 18px 0px #ddd, 36px 0px #ddd;
   background-color: #dddd;
 }
+
 .feature-item-link {
   display: flex;
   align-items: center;
@@ -298,17 +298,82 @@ body {
   content: "";
   width: 40px;
   height: 3px;
-  background-color:var(--brand-color);
+  background-color: var(--brand-color);
   margin-right: 10px;
   transition: width 0.3s ease;
 
 }
 
 .feature-item-link:hover::before {
-    width: 50px;
+  width: 50px;
 }
-/* SECTION FEATURE STYLE END*/
 
+/* SECTION FEATURE STYLE END*/
+/* SECTION INFO STYLE */
+.info {
+  padding: 70px 125px;
+}
+
+.info-contayner {
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+  }
+.all-text-wrapper {
+  
+}
+
+.info-contayner p {
+  font-size: 16px;
+  line-height: 24px;
+
+}
+.all-text-wraper-title {
+
+}
+.all-text-wraper-text {
+
+}
+.site-btn {
+
+}
+.hero-btn {
+
+}
+.site-botom-btn {
+
+}
+
+/* SECTION INFO STYLE END*/
+
+
+/* SITE BOTTOM STYLE */
+.site-botom {
+  padding: 240px 0px 240px 0px;
+  background-image: url('./img/section-bottom-bg-img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.site-bottom-contayner {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.all-text-wrapper {}
+
+.site-botom-text-wraper h2 {
+  color: #fff;
+}
+.site-botom-text-wraper p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  border-left: 3px solid #fff;
+}
+/* SITE BOTTOM STYLE END*/
 /* MAIN SECTION STYLES END*/
 
 
@@ -317,16 +382,17 @@ body {
 
 
 
-
-
-
 /* reatina image styles */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and ( min-resolution: 192dpi),
-only screen and ( min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
   .hero {
     background-image: url("./img/aple-wotch-clock@2x.jpg");
-  }  
+  }
+
+  .site-botom {
+    background-image: url('./img/section-bottom-bg-img@2x.png');
+  }
 }
+
 /* reatina image styles end */
